@@ -204,6 +204,9 @@ this building and committing docs, something like::
         
         cd $(BUILDDIR)/html; git add . ; git commit -m "rebuilt docs"; git push origin gh-pages
 
+Anyway, now you can view your new pages on http://<user>.github.com/<repo>. So
+in this case, it's http://daler.github.com/sphinxdoc-test.
+
 Directory structure
 -------------------
 So that we're on the same page, the final directory structure looks like this::
