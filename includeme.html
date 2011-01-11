@@ -225,6 +225,17 @@ this building and committing docs, something like:</p>
 </div>
 <p>Anyway, now you can view your new pages on <a class="reference external" href="http:/">http:/</a>/&lt;user&gt;.github.com/&lt;repo&gt;. So
 in this case, it&#8217;s <a class="reference external" href="http://daler.github.com/sphinxdoc-test">http://daler.github.com/sphinxdoc-test</a>.</p>
+<div class="section" id="add-a-nojekyll-file">
+<h2>Add a .nojekyll file<a class="headerlink" href="#add-a-nojekyll-file" title="Permalink to this headline">¶</a></h2>
+<p>The last thing we have to do is add an empty file called <tt class="docutils literal"><span class="pre">.nojekyll</span></tt> in the
+docs repo.  This tells github&#8217;s default parsing software to ignore the
+sphinx-generated pages.  Make sure you commit it:</p>
+<div class="highlight-python"><pre>cd sphinxdoc-test-docs/html
+touch .nojekyll
+git add .nojekyll
+git commit -m "added .nojekyll"</pre>
+</div>
+</div>
 </div>
 <div class="section" id="directory-structure">
 <h1>Directory structure<a class="headerlink" href="#directory-structure" title="Permalink to this headline">¶</a></h1>
@@ -292,7 +303,10 @@ sphinxdoc-test-docs
 <li><a class="reference internal" href="#index-rst-changes">index.rst changes</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#creating-and-committing-workflow">Creating and committing workflow</a></li>
+<li><a class="reference internal" href="#creating-and-committing-workflow">Creating and committing workflow</a><ul>
+<li><a class="reference internal" href="#add-a-nojekyll-file">Add a .nojekyll file</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#directory-structure">Directory structure</a></li>
 </ul>
 
