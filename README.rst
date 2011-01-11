@@ -64,16 +64,20 @@ Then clone the repo you just set up on github into a dir called ``html``
 
 The ``html`` dir now has a clone of the repo.  
 
-The following commands do git fancy stuff that I don't completely
-understand yet, suffice to say that after these 3 commands you get a new
-branch, ``gh-pages``, the branch is cleaned out with no files in it, and
-checks out the gh-pages branch::
+Next, create a new branch called ``gh-pages``.  This is a special branch name
+that github looks for in order to build static html pages::
+
+    git branch gh-pages
+
+The following commands do git fancy stuff that I don't completely understand
+yet, suffice to say that after these 3 commands you switch to the new branch
+``gh-pages`` and the branch is cleaned out with no files in it::
 
     git symbolic-ref HEAD refs/heads/gh-pages  # auto-switches branches to gh-pages
     rm .git/index
     git clean -fdx
 
-Make sure we're on gh-pages::
+And confirm we're on gh-pages::
 
     git branch
 
