@@ -136,22 +136,23 @@ through all this trouble).
 
 So we need to point sphinx's ``index.rst`` to the ``README.rst`` file in
 the root of the main repo.  Turns out that relative path names don't work
-in ``index.rst`` so a workaround is to make a new file (I'm calling it
-``includeme.rst`` next to ``index.rst`` (so in the
-``sphinxdoc-test/docs/source`` dir) and in THAT put the path to the true
-``README.rst``.  So ``includeme.rst`` should look like this::
+in ``index.rst``, so here's a workaround:
+
+Make a new file, ``sphinxdoc-test/docs/source/includeme.rst``.  In there, put
+an include directive pointing to the true``README.rst``.  So ``includeme.rst``
+should look like this::
 
     .. include:: ../../README.rst
 
-Then in ``index.rst``, add ``includeme`` to the toctree.  So ``index.rst``
-should look something like::
+Then in ``index.rst``, add ``includeme`` to the toctree.  So the relevant part
+of ``index.rst`` should look something like::
 
     .. toctree::
        :maxdepth: 2
 
        includeme
 
-OK, we should be done now.
+OK, we should be done with the setup now.
 
 Creating and committing workflow
 --------------------------------
@@ -185,4 +186,11 @@ And then publish the newly built docs::
 
     git push origin gh-pages
 
-Rinse and repeat.
+Rinse and repeat.  Of course, you could always add a task to the Makefile to do
+this building and committing docs, something like::
+
+    buildandcommithtml: html latexpdf
+        
+        cd $(BUILDDIR)/html; git add . ; git commit -m "rebuilt docs"; git push origin gh-pages
+
+
