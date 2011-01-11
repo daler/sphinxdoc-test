@@ -100,15 +100,18 @@ cd sphinxdoc-test-docs</pre>
 cd html</pre>
 </div>
 <p>The <tt class="docutils literal"><span class="pre">html</span></tt> dir now has a clone of the repo.</p>
-<p>The following commands do git fancy stuff that I don&#8217;t completely
-understand yet, suffice to say that after these 3 commands you get a new
-branch, <tt class="docutils literal"><span class="pre">gh-pages</span></tt>, the branch is cleaned out with no files in it, and
-checks out the gh-pages branch:</p>
+<p>Next, create a new branch called <tt class="docutils literal"><span class="pre">gh-pages</span></tt>.  This is a special branch name
+that github looks for in order to build static html pages:</p>
+<div class="highlight-python"><pre>git branch gh-pages</pre>
+</div>
+<p>The following commands do git fancy stuff that I don&#8217;t completely understand
+yet, suffice to say that after these 3 commands you switch to the new branch
+<tt class="docutils literal"><span class="pre">gh-pages</span></tt> and the branch is cleaned out with no files in it:</p>
 <div class="highlight-python"><pre>git symbolic-ref HEAD refs/heads/gh-pages  # auto-switches branches to gh-pages
 rm .git/index
 git clean -fdx</pre>
 </div>
-<p>Make sure we&#8217;re on gh-pages:</p>
+<p>And confirm we&#8217;re on gh-pages:</p>
 <div class="highlight-python"><pre>git branch</pre>
 </div>
 <p>I&#8217;ll refer to this as the &#8216;gh-pages repo&#8217;.</p>
