@@ -8,6 +8,9 @@ http://pages.github.com/, which does stuff within the repo directory.
 Using a separate docs dir made things easier for me to figure out and
 configure easier with the Sphinx makefile.
 
+See http://daler.github.com/sphinxdoc-test for the Sphinx-generated version of
+this README, created using the commands documented in it...
+
 
 Protocol
 --------
