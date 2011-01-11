@@ -167,20 +167,20 @@ can include module, class, and function documentation to boot, hence going
 through all this trouble).</p>
 <p>So we need to point sphinx&#8217;s <tt class="docutils literal"><span class="pre">index.rst</span></tt> to the <tt class="docutils literal"><span class="pre">README.rst</span></tt> file in
 the root of the main repo.  Turns out that relative path names don&#8217;t work
-in <tt class="docutils literal"><span class="pre">index.rst</span></tt> so a workaround is to make a new file (I&#8217;m calling it
-<tt class="docutils literal"><span class="pre">includeme.rst</span></tt> next to <tt class="docutils literal"><span class="pre">index.rst</span></tt> (so in the
-<tt class="docutils literal"><span class="pre">sphinxdoc-test/docs/source</span></tt> dir) and in THAT put the path to the true
-<tt class="docutils literal"><span class="pre">README.rst</span></tt>.  So <tt class="docutils literal"><span class="pre">includeme.rst</span></tt> should look like this:</p>
+in <tt class="docutils literal"><span class="pre">index.rst</span></tt>, so here&#8217;s a workaround:</p>
+<p>Make a new file, <tt class="docutils literal"><span class="pre">sphinxdoc-test/docs/source/includeme.rst</span></tt>.  In there, put
+an include directive pointing to the true``README.rst``.  So <tt class="docutils literal"><span class="pre">includeme.rst</span></tt>
+should look like this:</p>
 <div class="highlight-python"><pre>.. include:: ../../README.rst</pre>
 </div>
-<p>Then in <tt class="docutils literal"><span class="pre">index.rst</span></tt>, add <tt class="docutils literal"><span class="pre">includeme</span></tt> to the toctree.  So <tt class="docutils literal"><span class="pre">index.rst</span></tt>
-should look something like:</p>
+<p>Then in <tt class="docutils literal"><span class="pre">index.rst</span></tt>, add <tt class="docutils literal"><span class="pre">includeme</span></tt> to the toctree.  So the relevant part
+of <tt class="docutils literal"><span class="pre">index.rst</span></tt> should look something like:</p>
 <div class="highlight-python"><pre>.. toctree::
    :maxdepth: 2
 
    includeme</pre>
 </div>
-<p>OK, we should be done now.</p>
+<p>OK, we should be done with the setup now.</p>
 </div>
 </div>
 <div class="section" id="creating-and-committing-workflow">
@@ -210,7 +210,7 @@ git commit -m "rebuilt docs"</pre>
 <p>And then publish the newly built docs:</p>
 <div class="highlight-python"><pre>git push origin gh-pages</pre>
 </div>
-<p>Rinse and repeat.</p>
+<p>Rinse and repeat.  Of course, you could always add a task to the Makefile to do this all for you.</p>
 </div>
 
 
