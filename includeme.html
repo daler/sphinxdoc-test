@@ -210,7 +210,12 @@ git commit -m "rebuilt docs"</pre>
 <p>And then publish the newly built docs:</p>
 <div class="highlight-python"><pre>git push origin gh-pages</pre>
 </div>
-<p>Rinse and repeat.  Of course, you could always add a task to the Makefile to do this all for you.</p>
+<p>Rinse and repeat.  Of course, you could always add a task to the Makefile to do
+this building and committing docs, something like:</p>
+<div class="highlight-python"><pre>buildandcommithtml: html latexpdf
+
+    cd $(BUILDDIR)/html; git add . ; git commit -m "rebuilt docs"; git push origin gh-pages</pre>
+</div>
 </div>
 
 
