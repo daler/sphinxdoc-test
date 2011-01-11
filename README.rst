@@ -211,6 +211,19 @@ this building and committing docs, something like::
 Anyway, now you can view your new pages on http://<user>.github.com/<repo>. So
 in this case, it's http://daler.github.com/sphinxdoc-test.
 
+
+Add a .nojekyll file
+~~~~~~~~~~~~~~~~~~~~
+The last thing we have to do is add an empty file called ``.nojekyll`` in the
+docs repo.  This tells github's default parsing software to ignore the
+sphinx-generated pages that are in the gh-pages branch.  Make sure you commit
+it, too::
+
+    cd sphinxdoc-test-docs/html
+    touch .nojekyll
+    git add .nojekyll
+    git commit -m "added .nojekyll"
+
 Directory structure
 -------------------
 So that we're on the same page, the final directory structure looks like this::
