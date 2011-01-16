@@ -229,7 +229,8 @@ in this case, it&#8217;s <a class="reference external" href="http://daler.github
 <h2>Add a .nojekyll file<a class="headerlink" href="#add-a-nojekyll-file" title="Permalink to this headline">¶</a></h2>
 <p>The last thing we have to do is add an empty file called <tt class="docutils literal"><span class="pre">.nojekyll</span></tt> in the
 docs repo.  This tells github&#8217;s default parsing software to ignore the
-sphinx-generated pages.  Make sure you commit it:</p>
+sphinx-generated pages that are in the gh-pages branch.  Make sure you commit
+it, too:</p>
 <div class="highlight-python"><pre>cd sphinxdoc-test-docs/html
 touch .nojekyll
 git add .nojekyll
@@ -285,6 +286,10 @@ sphinxdoc-test-docs
         `-- underscore.js</pre>
 </div>
 </div>
+<div class="section" id="setting-up-cloned-repos-on-another-machine">
+<h1>Setting up cloned repos on another machine<a class="headerlink" href="#setting-up-cloned-repos-on-another-machine" title="Permalink to this headline">¶</a></h1>
+<p>The steps for setting this up on another machine:</p>
+</div>
 
 
           </div>
@@ -308,6 +313,7 @@ sphinxdoc-test-docs
 </ul>
 </li>
 <li><a class="reference internal" href="#directory-structure">Directory structure</a></li>
+<li><a class="reference internal" href="#setting-up-cloned-repos-on-another-machine">Setting up cloned repos on another machine</a></li>
 </ul>
 
   <h4>Previous topic</h4>
