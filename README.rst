@@ -336,6 +336,7 @@ Now that everything is set up, general workflow is to:
         - if you're making a PDF manual, make that too with ``make
           latexpdf``.  Depending on where you're putting the PDF manual,
           you'll have to commit and push the new version as well.
+        - ``git push``
         - change to the docs repo
 
     * Next, in the docs repo:
@@ -343,6 +344,7 @@ Now that everything is set up, general workflow is to:
         - change to the docs repo (make sure you're in the html dir)
         - check to make sure you're on the gh-pages branch
         - ``git commit -a -m "rebuilt docs"``
+        - ``git push origin gh-pages``
         
 Done!
 
