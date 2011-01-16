@@ -333,6 +333,9 @@ Now that everything is set up, general workflow is to:
         - change to ``docs`` dir and run ``make html`` to generate the html
           docs in your docs repo.  This should not make any changes to the 
           main repo, so you don't have to commit again
+        - if you're making a PDF manual, make that too with ``make
+          latexpdf``.  Depending on where you're putting the PDF manual,
+          you'll have to commit and push the new version as well.
         - change to the docs repo
 
     * Next, in the docs repo:
