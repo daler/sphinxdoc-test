@@ -341,6 +341,10 @@ main page, in other <tt class="docutils literal"><span class="pre">.rst</span></
 <li>change to <tt class="docutils literal"><span class="pre">docs</span></tt> dir and run <tt class="docutils literal"><span class="pre">make</span> <span class="pre">html</span></tt> to generate the html
 docs in your docs repo.  This should not make any changes to the
 main repo, so you don&#8217;t have to commit again</li>
+<li>if you&#8217;re making a PDF manual, make that too with <tt class="docutils literal"><span class="pre">make</span>
+<span class="pre">latexpdf</span></tt>.  Depending on where you&#8217;re putting the PDF manual,
+you&#8217;ll have to commit and push the new version as well.</li>
+<li><tt class="docutils literal"><span class="pre">git</span> <span class="pre">push</span></tt></li>
 <li>change to the docs repo</li>
 </ul>
 </blockquote>
@@ -351,6 +355,7 @@ main repo, so you don&#8217;t have to commit again</li>
 <li>change to the docs repo (make sure you&#8217;re in the html dir)</li>
 <li>check to make sure you&#8217;re on the gh-pages branch</li>
 <li><tt class="docutils literal"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-a</span> <span class="pre">-m</span> <span class="pre">&quot;rebuilt</span> <span class="pre">docs&quot;</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">gh-pages</span></tt></li>
 </ul>
 </blockquote>
 </li>
