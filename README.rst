@@ -272,3 +272,6 @@ So that we're on the same page, the final directory structure looks like this::
             |-- sidebar.js
             `-- underscore.js
 
+Setting up cloned repos on another machine
+------------------------------------------
+The steps for setting this up on another machine:
