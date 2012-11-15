@@ -1,3 +1,5 @@
+`<manual.pdf>`_
+
 Publishing sphinx-generated docs on github
 ------------------------------------------
 github allows the publishing of static pages associated with a particular
