@@ -349,4 +349,4 @@ Now that everything is set up, general workflow is to:
 Done!
 
 
-
+`sphinxdoc-test/blob/master/manual.pdf`_
