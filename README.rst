@@ -203,7 +203,7 @@ Should probably add the newly built manual::
 Next, change to the gh-pages repo dir and commit the stuff that the ``make
 html`` command made::
 
-    cd ../sphinxdoc-test-docs
+    cd ../sphinxdoc-test-docs/html
     git add .
     git commit -m "rebuilt docs"
 
